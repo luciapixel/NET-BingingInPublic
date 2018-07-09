@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*html normalize*/
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+:focus { outline: 0;}
+a, a:link, a:visited, a:hover, a:active{text-decoration:none}
+table { border-collapse: separate;border-spacing: 0;}
+th, td {text-align: left; font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {list-style: none;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+/*end normalize*/
+
+/***** @fonts *****/
+@font-face {
+    font-family: 'NetflixSans_W_Bd';
+    src: url('../fonts/NetflixSans_W_Bd.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NetflixSans_W_Lt';
+    src: url('../fonts/NetflixSans_W_Lt.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NetflixSans_W_Md';
+    src: url('../fonts/NetflixSans_W_Md.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('../fonts/BebasNeueBold.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.easing1{
+    transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+.easing2{
+    transition: all .7s cubic-bezier(0.4, 0, 0, 1);
+}
+.easing3{
+    transition: all .4s cubic-bezier(0.85,0, 0, 1.01);
+}
+
+html, body {
+    width:300px;
+    height:600px;
+    margin:0;
+    color:#000000;
+    -webkit-font-smoothing: antialiased;
+}
+#wrap{
+    width: 298px;
+    height: 598px;
+    position: relative;
+    border: solid 1px black;
+    overflow:hidden;
+    background-color: #fff;
+}
+
+/****** CONTENT ******/
+#content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+#NetflixLogo{
+    width: 138px;
+    position: relative;
+    top: 29px;
+    left: 26px;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+#copy1{
+    font-family: 'NetflixSans_W_Md';
+    font-size: 41px;
+    color: #000;
+    position: absolute;
+    left: 26px;
+    top: 80px;
+    opacity: 0;
+}
+#copy2{
+    font-family: 'NetflixSans_W_Md';
+    font-size: 24px;
+    color: #000;
+    position: absolute;
+    left: 26px;
+    top: 136px;
+    opacity: 0;
+}
+#footer{
+    width: 115px;
+    height: 30px;
+    position: absolute;
+    bottom: 35px;
+    left: 16px;
+    font-family: 'NetflixSans_W_Md';
+    font-size: 12px;
+    color: #000;
+    opacity: 0;
+}
+#cont_arrow{
+    width: 17px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+#arrow_down{
+    width: 15px;
+    height: 16px;
+    margin-left: 1px;
+    position: relative;
+    top: 0;
+    animation: arrow 1s 3;
+    animation-delay: 1.5s;
+}
+@keyframes arrow{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 3px;
+    }
+}
+#line_arrow_down{
+    width: 17px;
+    height: 2px;
+    background-color: #e50914;
+}
+.txtFooter{
+    display: block;
+    margin-left: 27px;
+}
+#txtFooter2{
+    font-family: 'NetflixSans_W_Lt';
+}
+
+/* boton */
+.redButton{
+    background: #b9090b;
+    background: #d60813;
+    width: 118px;
+    height: 30px;
+    opacity: 0;
+    right: 18px;
+    bottom: 36px;
+    cursor: pointer;
+    z-index: 11;
+    position: absolute;
+    overflow: hidden;
+}.redButton p{
+    font-family: 'NetflixSans_W_Bd';
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 7px;
+    margin-left: -15px;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    transform: skew(45deg);
+    background: white;
+    position: absolute;
+    left: -133px;
+    top: 0;
+}
+.redButton:hover .bg{
+    left: 0;
+    transform: skew(0);
+}.redButton:hover p{
+    margin-left: 0px;
+    color: #d60813;
+}
+#arrow{
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    width: 13px;
+    height: 15px;
+}
+.line{
+    width: 7px;
+    height: 3px;
+    transform-origin: right center;
+    background: white;
+    position: absolute;
+}
+.line1{
+    transform: rotate(45deg);
+}
+.line2{
+    transform: rotate(-45deg);
+    margin-top: -1px;
+}
+#panel{
+    width: 279px;
+    height: 314px;
+    background-color: #2d2e30;
+    position: absolute;
+    left: 10px;
+    top: 190px;
+    opacity: 0;
+    padding-left: 7px;
+    box-sizing: border-box;
+}
+.row{
+    width: 100%;
+    height: 27px;
+    padding-top: 3px;
+    position: absolute;
+}
+.row1{
+    top: 35px;
+}
+.row2{
+    top: 173px;
+}
+.row3{
+    top: 218px;
+}
+.row4{
+    top: 262px;
+}
+.single_letter{
+    -webkit-transition: all 100ms linear;
+    -moz-transition: all 100ms linear;
+    -o-transition: all 100ms linear;
+    transition: all 100ms linear;
+    transform: rotateX(120deg);
+    -webkit-transform: rotateX(0deg); /* Safari and Chrome */
+    -moz-transform: rotateX(0deg); /* Firefox */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align:center;
+    width:24px;
+    margin-right:.5px;
+    font-family: 'BebasNeueBold';
+    color:#fff;
+    font-size:37px;
+    background: rgb(68,68,68);
+    background: -moz-linear-gradient(top,  rgba(68,68,68,1) 0%, rgba(102,102,102,1) 25%, rgba(68,68,68,1) 50%, rgba(102,102,102,1) 75%, rgba(68,68,68,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(68,68,68,1)), color-stop(25%,rgba(102,102,102,1)), color-stop(50%,rgba(68,68,68,1)), color-stop(75%,rgba(102,102,102,1)), color-stop(100%,rgba(68,68,68,1)));
+    background: -webkit-linear-gradient(top,  rgba(68,68,68,1) 0%,rgba(102,102,102,1) 25%,rgba(68,68,68,1) 50%,rgba(102,102,102,1) 75%,rgba(68,68,68,1) 100%);  Chrome10+,Safari5.1+ 
+    background: -o-linear-gradient(top,  rgba(68,68,68,1) 0%,rgba(102,102,102,1) 25%,rgba(68,68,68,1) 50%,rgba(102,102,102,1) 75%,rgba(68,68,68,1) 100%); 
+    background: -ms-linear-gradient(top,  rgba(68,68,68,1) 0%,rgba(102,102,102,1) 25%,rgba(68,68,68,1) 50%,rgba(102,102,102,1) 75%,rgba(68,68,68,1) 100%); 
+    background: linear-gradient(top,  rgba(68,68,68,1) 0%,rgba(102,102,102,1) 25%,rgba(68,68,68,1) 50%,rgba(102,102,102,1) 75%,rgba(68,68,68,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#444444',GradientType=0 );
+    float:left;
+    border-radius: 2px;
+    border:1px solid #222;
+    height:36px;
+    /*SHADOW*/
+    text-shadow: 0px 1px 1px #999;
+    background-clip: text;
+    filter: dropshadow(color=#999, offx=0, iny=2);
+}
+.single_letter span{
+    top: 3px;
+    position: relative;
+}
+.info{
+    font-family: 'BebasNeueBold';
+    font-size: 24px;
+    color: #efba00;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 6px;
+    opacity: 0;
+}
+.info img{
+    margin-left: 5px;
+}
+#info1{
+    top: 13px;
+}
+#info2{
+    top: 150px;
+}
+/********LOADING********/
+#spinner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 2;
+}
+.loader{
+    text-align: center;
+    margin: 288px auto;
+}
+.loader>div{
+    width:18px;
+    height:18px;
+    background-color:#e50914;
+    border-radius:50%;
+    display:inline-block;
+    -webkit-animation:bouncedelay 1.4s infinite ease-in-out both;
+    animation:bouncedelay 1.4s infinite ease-in-out both
+}
+.loader .bounce1{
+    -webkit-animation-delay:-.32s;
+    animation-delay:-.32s
+}
+.loader .bounce2{
+    -webkit-animation-delay:-.16s;
+    animation-delay:-.16s;
+}
+@-webkit-keyframes bouncedelay{
+    0%,100%,80%{
+        -webkit-transform:scale(0)
+        }
+    40%{
+        -webkit-transform:scale(1)
+        }
+}
+@keyframes bouncedelay{
+    0%,100%,80%{
+        -webkit-transform:scale(0);
+        transform:scale(0)
+        }
+    40%{
+        -webkit-transform:scale(1);
+        transform:scale(1)
+        }
+}
+
+/********EXIT********/
+
+.exit{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    /*background: red;*/
+}
+
+#exitFaldon{
+    height: 250px;
+    top: inherit;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

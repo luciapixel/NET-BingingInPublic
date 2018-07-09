@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="css/globalStyle.css">
+</head>
+<body onload="initLoader();">
+    <div id="wrap">
+        <div id="Spinner">
+            <div class="loader">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>    
+        </div>
+        
+        <div id="content">
+            <img id="NetflixLogo" class="easing1" src="images/logoNetflix.png">
+            
+            <p id="copy1" class="easing1">Va contigo.</p>
+            <p id="copy2" class="easing1">#ModoNetflix</p>
+            
+            <div id="panel" class="easing1">
+                <p class="info easing1" id="info1">DESTINO<img src="images/icon.png"></p>
+                <div class="row row1">
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                </div>
+                <p class="info easing1" id="info2">TIEMPO DE VUELO EN EPISODIOS<img src="images/icon.png"></p>
+                <div class="row row2">
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                </div>
+                <div class="row row3">
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                </div>
+                <div class="row row4">
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                    <div class="single_letter"><span></span></div>
+                </div>
+            </div>
+
+            <div id="footer" class="easing1">
+                <div id="cont_arrow">
+                    <img id="arrow_down" class="easing2" src="images/arrow.jpg">
+                    <div id="line_arrow_down"></div>
+                </div>
+                <p class="txtFooter" id="txtFooter1" class="easing1">Descarga ahora</p>
+                <p class="txtFooter" id="txtFooter2" class="easing1">los episodios.</p>
+            </div>
+
+            <div class="exit" id="exit"></div> 
+
+            <div class="redButton easing1" id="ctaBt">
+                <div class="bg easing3"></div>
+                <p class="easing1">VER AHORA</p>
+                <div id="arrow">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+        var clickTag = "https://www.netflix.com/";
+        $('#exit, #ctaBt').click(function(){
+            window.open(window.clickTag);
+        });
+    </script>
+</body>
+</html>
